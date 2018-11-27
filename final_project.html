@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<title>Ajax</title>
+
+<link href="final_project.css" rel="stylesheet" type="text/css"/>
+
+
+<script type="text/javascript">
+
+		y_val=0;
+		n_val=0;
+		field_num=1;
+
+		function field_addition(){
+
+			var fields=document.getElementById("fields");
+			var new_fi=document.createElement("input");
+			var parent = fields.parentNode;
+
+			fields.innerHTML+="<br/><br/>";
+
+			field_num = field_num + 1;
+			var field_str = "field_"+field_num;
+
+			new_fi.setAttribute("type", "text");
+			new_fi.setAttribute("class", "fiel");
+			new_fi.setAttribute("id", field_str);
+			new_fi.setAttribute("name", field_str);
+			new_fi.setAttribute("value", "Insert Field Name Here");
+			new_fi.setAttribute("onfocus", "if(this.value=='Insert Field Name Here') this.value='';");
+			new_fi.setAttribute("onblur", "if(this.value=='') this.value='Insert Field Name Here';");
+
+			var h_size = 180 + field_num*55; //Increase the height of the parent div
+			parent.style.height=h_size+"px";
+
+
+
+			fields.appendChild(new_fi);
+
+		}
+
+
+</script>
+
+
+</head>
+
+
+<body onload="init()" id="bod">
+
+
+	<h1>Welcome to the Poll Creator</h1>
+
+	<form action="final_project.php" method="get">
+	<p>
+		<div id="new_poll">
+
+			<div id="title_div">
+				
+				First Enter The Poll Question (only letters)
+
+				<br/>
+
+				<input type="text" id="poll_title" name="poll_title" value="Insert Poll Question Here" 
+		  		onfocus="if(this.value=='Insert Poll Question Here') this.value='';"
+		  		onblur="if(this.value=='') this.value='Insert Poll Question Here';"/>
+
+			</div>
+
+			<div id="fields">
+
+				<br/>
+				<br/>
+				
+				Now enter the different possible answers
+
+				<br/>
+
+				<input type="text" class="fiel" id="field_1" name="field_1" value="Insert Field Name Here" 
+		  		onfocus="if(this.value=='Insert Field Name Here') this.value='';" 
+		  		onblur="if(this.value=='') this.value='Insert Field Name Here';"/>
+
+			</div>
+
+			<br/>
+
+			<input type="button" class="button" value="Add a Field" onclick="field_addition()" />
+
+			<input type="submit" class="button" value="Create Poll" />
+
+		</div>
+
+
+		</p>
+	</form>
+
+	
+</body>
+</html>
+

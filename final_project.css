@@ -1,0 +1,97 @@
+h1 {
+font-size: 50px;
+font-family: Impact;
+color: #bfbfbf;
+background-color: #808080;
+
+}
+
+#bod{
+background-color: #808080;
+text-align: center;
+}
+
+#new_poll{
+	background-color: #bfbfbf;
+	width: 700px;
+	height:230px;
+	padding-top:20px;
+	position: relative;
+	margin: auto;
+
+}
+
+#title_div{
+font-size: 20px;
+font-weight: bold;
+}
+
+
+
+#poll_title{
+
+font-size: 15px;
+font-family: sans-serif;
+font-style: italic;
+border:1px none grey;
+background-color: #a9a9a9;
+width: 500px;
+height:30px;
+}
+
+#fields{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.fiel{
+font-size: 15px;
+font-family: sans-serif;
+font-style: italic;
+border:1px none grey;
+background-color: #a9a9a9;
+width: 500px;
+height:30px;
+}
+
+.button{
+	background-color: #7FFF00;
+    
+    color: grey;
+    padding: 15px 22px;
+    text-align: center;
+    font-size: 15px;
+}
+
+#yes	{
+width:100px;
+height: 20px;
+border: solid black 1px;
+background-color:blue;
+margin: 20px;
+		}
+
+#no	{
+width:100px;
+height: 20px;
+border: solid black 1px;
+background-color:red; 
+margin: 20px;
+}
+
+#container {
+margin-top: 50px;
+width:400px;
+height: 300px;
+margin: 20px;
+}
+
+#view_table{
+background-color: red;
+text-align: center;
+width:400px;
+height: 300px;
+font-size: 20px;
+
+}
+
